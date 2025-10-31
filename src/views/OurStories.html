@@ -1,0 +1,51 @@
+<template>
+  <div class="our-stories-page">
+    <header>
+      <h1>Our Stories</h1>
+      <p>Explore the inspiring stories of our community members.</p>
+    </header>
+
+    <main>
+      <section v-for="story in stories" :key="story.id" class="story-card">
+        <img :src="story.imageUrl" :alt="story.title" />
+        <h2>{{ story.title }}</h2>
+        <p>{{ story.description }}</p>
+        <a :href="story.readMoreUrl" class="read-more">Read More</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; {{ currentYear }} iWebCircle. All rights reserved.</p>
+    </footer>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'OurStories',
+  data() {
+    return {
+      stories: [
+        {
+          id: 1,
+          title: 'John's Inspiring Journey',
+          description: 'Learn how John overcame challenges and found success.',
+          imageUrl: 'john-story.jpg',
+          readMoreUrl: '/stories/john'
+        },
+        {
+          id: 2,
+          title: 'Sarah's Entrepreneurial Adventure',
+          description: 'Discover Sarah's path to building a thriving business.',
+          imageUrl: 'sarah-story.jpg',
+          readMoreUrl: '/stories/sarah'
+        },
+        // Add more story objects as needed
+      ],
+      currentYear: new Date().getFullYear()
+    }
+  }
+}
+</script>
+
+<style src="./OurStories.css"></style>
