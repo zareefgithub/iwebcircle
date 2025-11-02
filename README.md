@@ -1,66 +1,249 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# iWebCircle - AI SaaS Company Website
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A modern, professional website for iWebCircle, an AI-powered SaaS solutions company. Built with Laravel 11 and featuring a comprehensive admin panel for content management.
 
-## About Laravel
+## 🚀 Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Public Website
+- **Modern Design**: Beautiful, responsive UI built with Tailwind CSS
+- **SEO Optimized**: Meta tags, Open Graph, schema markup, and sitemap
+- **Fast Performance**: Optimized assets with Vite bundling
+- **Key Pages**:
+  - Home page with hero section and feature showcase
+  - About Us page with company story, mission, vision, and core values
+  - Services page highlighting AI solutions
+  - Products/Portfolio showcase
+  - Blog with posts and categories
+  - Contact form with validation
+  - Dynamic sitemap generation
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Admin Panel
+- **Secure Authentication**: Admin login with middleware protection
+- **Content Management**:
+  - Blog posts (create, edit, delete with rich content)
+  - Products/Portfolio items with images
+  - Testimonials management
+  - Contact form submissions viewer
+- **Page Settings CMS**:
+  - **Contact Page Editor**: Edit all contact information, social media links, and FAQ section
+  - **About Page Editor**: Edit hero, story, mission, vision, 6 core values, statistics, and CTA
+- **Dashboard**: Overview of content and recent activity
+- **Modern UI**: Clean, intuitive admin interface with gradient accents
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Technical Features
+- Laravel 11 framework
+- MySQL database
+- Tailwind CSS for styling
+- Vite for asset bundling
+- Eloquent ORM
+- Blade templating
+- Database seeders for sample content
+- Responsive mobile-first design
 
-## Learning Laravel
+## 📋 Requirements
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- PHP 8.2 or higher
+- Composer
+- Node.js & NPM
+- MySQL 5.7+ or MariaDB 10.3+
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🛠️ Installation
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. **Clone the repository**
+```bash
+git clone <repository-url>
+cd webcircle
+```
 
-## Laravel Sponsors
+2. **Install PHP dependencies**
+```bash
+composer install
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+3. **Install Node dependencies**
+```bash
+npm install
+```
 
-### Premium Partners
+4. **Environment setup**
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+5. **Configure database**
+Edit `.env` file with your database credentials:
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=webcircle
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
 
-## Contributing
+6. **Run migrations and seeders**
+```bash
+php artisan migrate --seed
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+7. **Build assets**
+```bash
+npm run build
+```
 
-## Code of Conduct
+For development with hot reload:
+```bash
+npm run dev
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+8. **Start the server**
+```bash
+php artisan serve
+```
 
-## Security Vulnerabilities
+Visit `http://localhost:8000` to view the site.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 👤 Admin Access
 
-## License
+After running the seeders, you can access the admin panel at `/admin/login`
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**Default Admin Credentials:**
+- Email: `admin@iwebcircle.com`
+- Password: `password`
+
+**⚠️ Important:** Change the default admin password immediately after first login!
+
+## 📁 Project Structure
+
+```
+webcircle/
+├── app/
+│   ├── Http/Controllers/
+│   │   ├── Admin/          # Admin panel controllers
+│   │   ├── AboutController.php
+│   │   ├── BlogController.php
+│   │   ├── ContactController.php
+│   │   ├── HomeController.php
+│   │   ├── ProductsController.php
+│   │   └── ServicesController.php
+│   ├── Models/
+│   │   ├── Contact.php
+│   │   ├── Post.php
+│   │   ├── Project.php
+│   │   ├── Setting.php
+│   │   ├── Testimonial.php
+│   │   └── User.php
+│   └── Middleware/
+│       └── AdminMiddleware.php
+├── database/
+│   ├── migrations/
+│   └── seeders/
+├── resources/
+│   ├── views/
+│   │   ├── admin/          # Admin panel views
+│   │   ├── about.blade.php
+│   │   ├── blog/
+│   │   ├── contact.blade.php
+│   │   ├── home.blade.php
+│   │   ├── products/
+│   │   └── services.blade.php
+│   ├── css/
+│   └── js/
+└── routes/
+    ├── web.php
+    └── admin.php
+```
+
+## 🎨 Customization
+
+### Editing Page Content via Admin Panel
+
+1. **Contact Page**
+   - Navigate to Admin → Settings → Contact Page
+   - Edit contact information, email, phone, address, social media links
+   - Changes appear immediately on the public site
+
+2. **About Page**
+   - Navigate to Admin → Settings → About Page
+   - Edit hero section, story, mission, vision, core values, statistics
+   - Comprehensive form with all editable sections
+
+### Adding Blog Posts
+
+1. Login to admin panel
+2. Go to Blog Posts → Create New
+3. Add title, slug, excerpt, content, featured image, and meta tags
+4. Publish or save as draft
+
+### Managing Products/Portfolio
+
+1. Navigate to Products in admin panel
+2. Create new product with images, description, and details
+3. Products appear on the public Products page
+
+## 🔐 Security Features
+
+- Admin authentication with middleware
+- CSRF protection on all forms
+- Password hashing with bcrypt
+- Input validation and sanitization
+- Admin role-based access control
+
+## 🌐 SEO Features
+
+- Dynamic meta titles and descriptions
+- Open Graph tags for social sharing
+- Schema.org structured data
+- Automatic sitemap generation (`/sitemap.xml`)
+- Robots.txt configuration
+- Canonical URLs
+
+## 📱 Responsive Design
+
+The entire website is fully responsive and optimized for:
+- Desktop (1920px and above)
+- Laptop (1024px - 1919px)
+- Tablet (768px - 1023px)
+- Mobile (320px - 767px)
+
+## 🚀 Production Deployment
+
+1. Set `APP_ENV=production` and `APP_DEBUG=false` in `.env`
+2. Configure your production database
+3. Run migrations: `php artisan migrate --force`
+4. Build production assets: `npm run build`
+5. Set up proper web server configuration (Apache/Nginx)
+6. Configure SSL certificate
+7. Set up cron job for Laravel scheduler (if needed)
+8. Optimize for production:
+```bash
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+```
+
+## 📄 License
+
+This project is proprietary software developed for iWebCircle.
+
+## 🤝 Support
+
+For support, email contact@iwebcircle.com or visit our website.
+
+## 🔄 Updates & Maintenance
+
+To update the project:
+```bash
+git pull origin main
+composer install
+npm install
+php artisan migrate
+npm run build
+php artisan config:clear
+php artisan cache:clear
+```
+
+---
+
+Built with ❤️ using Laravel and Tailwind CSS
