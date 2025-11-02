@@ -216,23 +216,6 @@
                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                         @enderror
                     </div>
-
-                    <div>
-                        <label for="social_github_url" class="block text-sm font-medium text-gray-700 mb-2">
-                            GitHub URL
-                        </label>
-                        <input 
-                            type="url" 
-                            id="social_github_url" 
-                            name="social_github_url" 
-                            value="{{ old('social_github_url', $settings['social_github_url']->value ?? '') }}"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent @error('social_github_url') border-red-500 @enderror"
-                            placeholder="https://github.com/yourcompany"
-                        >
-                        @error('social_github_url')
-                            <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
-                        @enderror
-                    </div>
                 </div>
             </div>
 

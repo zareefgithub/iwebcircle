@@ -207,6 +207,24 @@ The entire website is fully responsive and optimized for:
 - Tablet (768px - 1023px)
 - Mobile (320px - 767px)
 
+## 🔒 reCAPTCHA Setup
+
+The contact form includes Google reCAPTCHA v2 to prevent spam submissions.
+
+**To enable reCAPTCHA:**
+
+1. Get your keys from [Google reCAPTCHA Admin Console](https://www.google.com/recaptcha/admin)
+2. Register a new site with reCAPTCHA v2 (Checkbox)
+3. Add your domain(s) including `localhost` for development
+4. Add keys to your `.env` file:
+```env
+RECAPTCHA_SITE_KEY=your_site_key_here
+RECAPTCHA_SECRET_KEY=your_secret_key_here
+```
+5. Clear config cache: `php artisan config:clear`
+
+Without these keys configured, the contact form will not work properly.
+
 ## 🚀 Production Deployment
 
 1. Set `APP_ENV=production` and `APP_DEBUG=false` in `.env`

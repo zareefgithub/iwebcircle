@@ -198,7 +198,15 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        @php
+            $productCount = $featuredProjects->count();
+            $gridClass = match($productCount) {
+                1 => 'grid grid-cols-1 max-w-md mx-auto gap-8',
+                2 => 'grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-8',
+                default => 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+            };
+        @endphp
+        <div class="{{ $gridClass }}">
             @foreach($featuredProjects as $project)
             <a href="{{ route('products.show', $project) }}" class="group block bg-white rounded-2xl overflow-hidden hover:shadow-2xl transition duration-300">
                 <div class="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 relative overflow-hidden">
@@ -250,7 +258,15 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        @php
+            $postCount = $latestPosts->count();
+            $blogGridClass = match($postCount) {
+                1 => 'grid grid-cols-1 max-w-md mx-auto gap-8',
+                2 => 'grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-8',
+                default => 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+            };
+        @endphp
+        <div class="{{ $blogGridClass }}">
             @foreach($latestPosts as $post)
             <a href="{{ route('blog.show', $post) }}" class="group block bg-white rounded-2xl overflow-hidden hover:shadow-xl transition duration-300">
                 <div class="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 relative overflow-hidden">

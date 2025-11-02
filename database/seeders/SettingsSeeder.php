@@ -83,12 +83,6 @@ class SettingsSeeder extends Seeder
                 'type' => 'url',
                 'group' => 'social',
             ],
-            [
-                'key' => 'social_github_url',
-                'value' => 'https://github.com/iwebcircle',
-                'type' => 'url',
-                'group' => 'social',
-            ],
 
             // FAQ Section
             [

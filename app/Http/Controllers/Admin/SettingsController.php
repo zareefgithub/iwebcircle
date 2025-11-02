@@ -37,7 +37,6 @@ class SettingsController extends Controller
             'contact_office_address_line2' => 'required|string|max:255',
             'social_twitter_url' => 'nullable|url|max:255',
             'social_linkedin_url' => 'nullable|url|max:255',
-            'social_github_url' => 'nullable|url|max:255',
             'contact_faq_title' => 'required|string|max:255',
             'contact_faq_description' => 'required|string|max:1000',
         ]);
