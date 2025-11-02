@@ -77,23 +77,5 @@
         @endif
     </div>
 </section>
-
-<!-- Newsletter Section -->
-<section class="py-20 bg-gradient-to-br from-blue-600 via-blue-500 to-purple-600">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Stay Updated</h2>
-        <p class="text-xl text-blue-100 mb-8">
-            Subscribe to our newsletter for the latest AI insights and updates
-        </p>
-        <div class="max-w-md mx-auto">
-            <form class="flex flex-col sm:flex-row gap-3">
-                <input type="email" placeholder="Your email address" class="flex-1 px-6 py-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300" required>
-                <button type="submit" class="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:shadow-xl transition">
-                    Subscribe
-                </button>
-            </form>
-        </div>
-    </div>
-</section>
 @endsection
 
